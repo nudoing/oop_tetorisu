@@ -1,7 +1,7 @@
 
-Field f = new Field(50,50);
 
-Mino m = new Mino();
+Player player = new Player();
+Field f = new Field(50,50,player);
 
 void setup(){
   
@@ -13,6 +13,11 @@ void draw(){
   background(255);
   f.render();
   
-  translate(100,100);
-  m.render(40);
+}
+
+
+void keyPressed(){
+  
+  player.turnR();
+  
 }

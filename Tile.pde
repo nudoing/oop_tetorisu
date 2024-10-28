@@ -1,5 +1,4 @@
-//かべのタイル
-Tile TILE_KABE = new Tile(0);
+
 //１マスを表現するやつ
 class Tile{  
   private int iro;
@@ -9,8 +8,8 @@ class Tile{
   }
   
   
-  void render(float tile_size){
-    float s = tile_size/2;
+  void render(){
+    float s = TILE_SIZE/2;
     push();
     
     colorMode(HSB,360,100,100);
@@ -24,7 +23,7 @@ class Tile{
 
     rectMode(CENTER);
     fill(iro,90,90);    
-    rect(0,0,tile_size*0.6,tile_size*0.6);
+    rect(0,0,TILE_SIZE*0.6,TILE_SIZE*0.6);
     
     pop();
   }

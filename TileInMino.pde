@@ -12,13 +12,18 @@ class TileInMino {
   }
   
   
-  void render(float tile_size){
+  void render(){
     push();
     
-    translate(pos.x*tile_size,pos.y*tile_size);
+    translate(pos.x*TILE_SIZE,pos.y*TILE_SIZE);
     
-    tile.render(tile_size);
+    tile.render();
     pop();
+  }
+  
+  
+  void turnR(){
+    pos.rotate(HALF_PI);
   }
   
 }

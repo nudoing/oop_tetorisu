@@ -17,21 +17,26 @@ class Mino{
   }
   
   
-  void render(float tile_size){
-    
-    rotate(TAU/4);
+  void render(){
     
     for(TileInMino t:tiles){
       push();
-      t.render(tile_size);
+      t.render();
       
       pop();
       
     }
     
+  }
+  
+  
+  void turnR(){
     
-    
+    for(TileInMino t:tiles){
+      t.turnR();
+    }
     
   }
+  
   
 }
